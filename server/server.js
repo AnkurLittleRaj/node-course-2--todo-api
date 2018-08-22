@@ -37,6 +37,17 @@ app.get('/todos',(req,res)=>{
         res.status(400).send(e) 
     })
 })
+// app.post('/users',(req,res) =>{
+//     var newTod = new user({
+//        email : req.body.email
+//     });
+
+//     newTod.save().then((doc) =>{
+//         res.send(doc);
+//     },(e) =>{
+//         res.status(400).send(e)
+//     });
+// });
 app.listen(3000,() =>{
     console.log("url is working properly");
 })
