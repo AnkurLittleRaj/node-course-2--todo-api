@@ -5,6 +5,7 @@ var {Todo} = require('./models/todo');
 var {user} = require('./models/user');
 const {ObjectId} = require('mongodb');
 var app = express();
+const port = process.env.PORT||3000;
 app.use(bodyParser.json());
 // app.post('/todos',(req,res)=>{
    
@@ -69,6 +70,6 @@ else{
     })
 }
 })
-app.listen(3000,() =>{
-    console.log("url is working properly");
+app.listen(port,() =>{
+    console.log("url is working properly on"+port);
 })
